@@ -39,7 +39,7 @@ public class Dijkstra {
 			}
 			
 			u = extract_min(G, visited);
-			System.out.println(u);
+			//System.out.println(u);
 			visited[u] = true;
 			count ++;
 		}

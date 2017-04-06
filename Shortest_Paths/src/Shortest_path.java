@@ -22,17 +22,38 @@ public class Shortest_path {
 			{7,8,7}
 		}; 
 		
+		///////////////////////////////////////////////////////////////
+		//single source shortest paths
 		Bellman_Ford bf = new Bellman_Ford();
-		System.out.println(bf.BellmanFord(G, weight, 0));
+		//System.out.println(bf.BellmanFord(G, weight, 0));
 		
 		//G has a circle
 		//the distance has value of -2147483644
 		Directed_Acyclic_Graph dag = new Directed_Acyclic_Graph();
-		System.out.println(dag.DAG(G, weight, 0));
+		//System.out.println(dag.DAG(G, weight, 0));
 		
-		System.out.println("Dijkstra: ");
+		//System.out.println("Dijkstra: ");
 		Dijkstra dj = new Dijkstra();
-		dj.Dij(G, weight, 0);
+		//dj.Dij(G, weight, 0);
+		
+		
+		///////////////////////////////////////////////////////////////
+		//all pairs shortest paths
+		int[][] edges = new int[][]{
+			{0,1,3},
+			{0,2,8},
+			{0,4,-4},
+			{1,3,1},
+			{1,4,7},
+			{2,1,4},
+			{3,0,2},
+			{3,2,-5},
+			{4,3,6}
+		};
+		
+		//matrix multiplication
+		Matrix_Multiplication mm = new Matrix_Multiplication();
+		mm.MatrixMultiplication(edges, 5);
 	}
 
 }
